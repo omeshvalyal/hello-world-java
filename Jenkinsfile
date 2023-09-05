@@ -86,4 +86,3 @@ node {
             error "Folder creation or push to repository failed. Check the logs for details."
         }
     }
-}
