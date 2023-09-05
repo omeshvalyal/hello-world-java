@@ -6,7 +6,8 @@ node {
 
     // Checkout the repository
     stage('Checkout') {
-        checkout([$class: 'GitSCM', branches: [[name: branchName]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: repoURL]]])
+       git credentialsId: 'github', url: 'git@github.com:omeshvalyal/hello-world-java.git'
+       // checkout([$class: 'GitSCM', branches: [[name: branchName]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: repoURL]]])
     }
 
     // Create the folder
