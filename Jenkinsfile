@@ -1,6 +1,6 @@
 node {
     // Define parameters
-    def repoURL = 'git@github.com:omeshvalyal/java-hello-world-with-maven.git'
+    def repoURL = 'git@github.com:omeshvalyal/hello-world-java.git'
     def branchName = 'main'
     def folderName = 'new_folder'
 
