@@ -44,7 +44,6 @@ node {
         }
     }
 }
-'
     def branchName = 'main'
     def folderName = 'new_folder'
 
