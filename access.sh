@@ -4,7 +4,7 @@ local_clone_path="/var/lib/jenkins/my_newdir3"
 source_branch_name="master"
 # Define the folder path and folder name
 path="/var/lib/jenkins"
-folder_name="my_newdir2"
+folder_name="my_newdir3"
 
 # Check if the folder exists
 if [ ! -d "$path/$folder_name" ]; then
