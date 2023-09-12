@@ -6,7 +6,7 @@ source_branch_name="master"
 path="/var/lib/jenkins"
 folder_name="my_newdir3"
 
-# Check if the folder exists
+#Check if the folder exists
 if [ ! -d "$path/$folder_name" ]; then
     echo "Folder does not exist. Creating..."
     mkdir -p "$path/$folder_name"
