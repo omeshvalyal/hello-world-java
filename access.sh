@@ -1,6 +1,6 @@
 #!/bin/bash
 repo_url="git@github.com:omeshvalyal/hello-world-java.git"
-local_clone_path="/var/lib/jenkins/my_newdir2"
+local_clone_path="/var/lib/jenkins/my_newdir3"
 source_branch_name="master"
 # Define the folder path and folder name
 path="/var/lib/jenkins"
