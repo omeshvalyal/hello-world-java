@@ -14,27 +14,19 @@ node {
     stage('Create Folder') {
         steps {
             script {
-                def repoPath = "${WORKSPACE}/${folderName}"
-                
-                // Check if the folder already exists
-                if (fileExists(repoPath)) {
-                    error "Folder '${folderName}' already exists."
-                } else {
-                    // Create the folder
-                    sh "mkdir ${folderName}"
-                    
-                    // Commit and push the folder to the repository
-                    sh """
-                        cd ${WORKSPACE}
-                        git add ${folderName}
-                        git commit -m "Add ${folderName}"
-                        git push origin ${branchName}
-                    """
+                def targetPath = "/var/lib/jenkins"
+                def fodlerName = "snypr-db-v2-cloned"
+                if (!fileExists(targetPath + "/" + folderName)) {
+                    echo "Fodler foes not exists. Creating..."
+                    sh "mkdir -p $targetPath/$folderName"
+                    echo "Folder created successfully."
+                }
+                else {
+                    echo "Folder already exists"
                 }
             }
         }
     }
-    
     // Post-build actions
     post {
         success {
