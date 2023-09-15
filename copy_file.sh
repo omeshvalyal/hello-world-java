@@ -18,7 +18,7 @@ git clone --branch "$source_branch_name" --single-branch "$repo_url" "$local_clo
 # Navigate to the cloned repository
 cd "$local_clone_path"
 
-source_folder="template_$2"
+source_folder="template_<version>"
 destination_folder="$2"
 
 if [ -d "$destination_folder" ]; then
