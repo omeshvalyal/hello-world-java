@@ -1,0 +1,30 @@
+pipeline{
+    agent any
+
+    tools {
+         maven 'maven'
+    }
+
+    stages{
+        stage('checkout'){
+            steps{
+               git credentialsId: 'github', url: 'git@github.com:omeshvalyal/hello-world-java.git'
+            }
+        }
+        stage('build'){
+            steps{
+               sh 'mvn clean package'     
+            }
+        }
+// stage('Upload to S3') {
+  //          steps {
+      //          script {
+    //    withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>])
+        //            def s3cmd = """
+          //              aws s3 cp $artifactPath s3://your-s3-bucket-name/ --recursive
+            //        """
+              //      sh s3cmd
+                //}
+            //}
+        }
+}
